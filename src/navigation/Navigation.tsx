@@ -20,6 +20,8 @@ import UserLogin from '../screens/accounts/UserLogin';
 import ManagerLogin from '../screens/accounts/ManagerLogin';
 import ManageReservations from '../screens/manager/ManageReservations';
 import Filter from '../screens/categories/Filter';
+import UserSignup from '../screens/accounts/UserSignup';
+import ManagerSignup from '../screens/accounts/ManagerSignup';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -91,6 +93,8 @@ const StackNav = () => {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="User Login" component={UserLogin} />
       <Stack.Screen name="Manager Login" component={ManagerLogin} />
+      <Stack.Screen name="User Signup" component={UserSignup} />
+      <Stack.Screen name="Manager Signup" component={ManagerSignup} />
       <Stack.Screen
         name="UserTabs"
         component={UserTabs}

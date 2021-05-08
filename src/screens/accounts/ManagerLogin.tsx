@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/core';
 import React, { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { Button, TextInput } from 'react-native-paper';
+import { Button, Colors, TextInput } from 'react-native-paper';
 
 interface IProps {}
 
@@ -32,6 +32,15 @@ const ManagerLogin: React.FC<IProps> = () => {
       >
         Login
       </Button>
+      <Pressable
+        style={{ marginTop: 20, alignSelf: 'center' }}
+        onPress={() => navigation.navigate('Manager Signup')}
+      >
+        <Text>
+          Don't have an account?
+          <Text style={{ color: Colors.purple900 }}> Sign up!</Text>
+        </Text>
+      </Pressable>
     </View>
 )};
 
