@@ -8,10 +8,11 @@ interface IProps {}
 const ManagerSettings: React.FC<IProps> = () => {
   const navigation = useNavigation();
   
-  return (<View style={styles.container}>
-    <Text>ManagerSettings</Text>
-    <Button onPress={() => navigation.navigate('Login')}>Log out</Button>
-  </View>
+  return (
+    <View style={styles.container}>
+      <Button onPress={() => navigation.navigate('Login')}>Log out</Button>
+      <Button onPress={() => navigation.navigate('UserTabs')}>Switch to User account</Button>
+    </View>
   )
 };
 

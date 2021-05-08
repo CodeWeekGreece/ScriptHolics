@@ -48,11 +48,7 @@ const Reserve: React.FC<IProps> = () => {
         <AirbnbRating starContainerStyle={{marginTop: 2, marginRight: 10,}} showRating={false} size={20} isDisabled />
       </View>
       <Text style={styles.descirption}>
-        {/* Here will be the place description */}
-        Lorem ipsum dolor sit amet consectetur, 
-        adipisicing elit. Veritatis ab ea ex! Dolore eveniet 
-        facere et laborum cumque sapiente aliquid optio, 
-        velit, expedita itaque est. Reprehenderit quas ab nisi dolor.
+        {params.description}
       </Text>
       <Text style={styles.price}>Price:
         <Text style={{ color: 'green', fontWeight: 'bold' }}> {params.price}</Text>

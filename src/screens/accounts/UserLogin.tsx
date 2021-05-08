@@ -24,7 +24,7 @@ const UserLogin: React.FC<IProps> = () => {
         secureTextEntry
         value={password}
         onChange={(password: string) => setPassword(password)}
-        style={{ marginBottom: 20, }}
+        style={{ marginBottom: 20 }}
       />
       <Button
         onPress={() => navigation.navigate('UserTabs')}

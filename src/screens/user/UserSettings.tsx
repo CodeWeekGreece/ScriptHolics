@@ -13,6 +13,7 @@ const UserSettings: React.FC<IProps> = () => {
   return (
     <View style={styles.container}>
       <Button onPress={() => navigation.navigate('Login')}>Log out</Button>
+      <Button onPress={() => navigation.navigate('ManagerTabs')}>Switch to Manager account</Button>
     </View>
   )
 };
