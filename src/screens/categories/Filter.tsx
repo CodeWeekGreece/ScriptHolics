@@ -7,7 +7,7 @@ interface IProps {}
 
 const Filter: React.FC<IProps> = () => {
   const [city, setCity] = useState('Heraklion');
-  const [distance, setDistance] = useState('Within 1km');
+  const [price, setPrice] = useState('$');
 
   return (
     <View style={styles.mainContainer}>
@@ -17,6 +17,7 @@ const Filter: React.FC<IProps> = () => {
           style={{ width: 170 }}
           selectedValue={city}
           onValueChange={(city) => setCity(city)}
+          mode="dialog"
         >
           <Picker.Item label="Heraklion" value="heraklion" />
           <Picker.Item label="Athens" value="athens" />
@@ -24,7 +25,7 @@ const Filter: React.FC<IProps> = () => {
           <Picker.Item label="Patras" value="patras" />
         </Picker>
       </View>
-      <View style={styles.itemContainer}>
+      <View style={{...styles.itemContainer, marginBottom: 20}}>
         <Text style={styles.text}>Rating:</Text>
         <AirbnbRating
           size={25}
@@ -34,6 +35,20 @@ const Filter: React.FC<IProps> = () => {
           count={5}
           showRating={false}
         />
+      </View>
+      <View style={styles.itemContainer}>
+        <Text style={styles.text}>Price:</Text>
+        <Picker
+          style={{ width: 170 }}
+          selectedValue={price}
+          onValueChange={(pr) => setPrice(pr)}
+          mode="dropdown"
+        >
+          <Picker.Item label="$" value={1} />
+          <Picker.Item label="$$" value={2} />
+          <Picker.Item label="$$$" value={3} />
+          <Picker.Item label="$$$" value={4} />
+        </Picker>
       </View>
     </View>
   );
@@ -48,6 +63,7 @@ const styles = StyleSheet.create({
   itemContainer: {
     justifyContent: 'space-between',
     flexDirection: 'row',
+    marginBottom: 10,
   },
   text: {
     fontSize: 17,
