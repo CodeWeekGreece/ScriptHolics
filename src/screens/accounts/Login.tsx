@@ -10,10 +10,12 @@ const Login: React.FC<IProps> = () => {
   const navigation = useNavigation();
 
   return (
-      <ImageBackground style={styles.container} source={require('../../assets/bg.png')}>
-        <Button onPress={() => navigation.navigate('UserTabs')}>Log in as user</Button>
-        <Button onPress={() => navigation.navigate('ManagerTabs')}>Log in as manager</Button>
-      </ImageBackground>
+    <View style={styles.mainContainer}>
+      {/* <ImageBackground style={styles.container} source={require('../../assets/bg.png')}> */}
+      <Button onPress={() => navigation.navigate('User Login')}>Log in as user</Button>
+      <Button onPress={() => navigation.navigate('Manager Login')}>Log in as manager</Button>
+      {/* </ImageBackground> */}
+    </View>
 )};
 
 const styles = StyleSheet.create({
@@ -21,6 +23,11 @@ const styles = StyleSheet.create({
     flex: 1, 
     resizeMode: 'cover'
   },
+  mainContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 });
 
 export default Login;

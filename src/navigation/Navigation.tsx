@@ -6,7 +6,7 @@ import UserHome from '../screens/user/UserHome';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MyResevations from '../screens/user/MyResevations';
-import Login from '../screens/Login';
+import Login from '../screens/accounts/Login';
 import ManagerHome from '../screens/manager/ManagerHome';
 import UserSettings from '../screens/user/UserSettings';
 import ManagerSettings from '../screens/manager/ManagerSettings';
@@ -16,6 +16,8 @@ import Supermarkets from '../screens/categories/Supermarkets';
 import SelfCare from '../screens/categories/SelfCare';
 import Clothing from '../screens/categories/Clothing';
 import Reserve from '../screens/user/Reserve';
+import UserLogin from '../screens/accounts/UserLogin';
+import ManagerLogin from '../screens/accounts/ManagerLogin';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -57,7 +59,7 @@ const ManagerTabs = () => {
   const navigation = useNavigation();
 
   return(
-    <Tab.Navigator initialRouteName="Shows" backBehavior="initialRoute">
+    <Tab.Navigator barStyle={{backgroundColor: 'white'}} initialRouteName="Shows" backBehavior="initialRoute">
       <Tab.Screen
         name="My Shop"
         component={ManagerHome}
@@ -81,6 +83,8 @@ const StackNav = () => {
   return (
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="User Login" component={UserLogin} />
+      <Stack.Screen name="Manager Login" component={ManagerLogin} />
       <Stack.Screen
         name="UserTabs"
         component={UserTabs}
