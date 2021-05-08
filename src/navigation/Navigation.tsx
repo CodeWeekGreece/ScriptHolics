@@ -18,6 +18,7 @@ import Clothing from '../screens/categories/Clothing';
 import Reserve from '../screens/user/Reserve';
 import UserLogin from '../screens/accounts/UserLogin';
 import ManagerLogin from '../screens/accounts/ManagerLogin';
+import ManageReservations from '../screens/manager/ManageReservations';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -55,16 +56,20 @@ const UserTabs = () => {
     </Tab.Navigator>
 )};
 
-const ManagerTabs = () => {
-  const navigation = useNavigation();
-
-  return(
+const ManagerTabs = () => (
     <Tab.Navigator barStyle={{backgroundColor: 'white'}} initialRouteName="Shows" backBehavior="initialRoute">
       <Tab.Screen
         name="My Shop"
         component={ManagerHome}
         options={{
           tabBarIcon: ({ color }: TabBarProps) => <MaterialCommunityIcons name="shopping" color={color} size={22} />,
+        }}
+      />
+      <Tab.Screen
+        name="Reservations"
+        component={ManageReservations}
+        options={{
+          tabBarIcon: ({ color }: TabBarProps) => <MaterialCommunityIcons name="ticket-account" color={color} size={22} />
         }}
       />
       <Tab.Screen
@@ -75,7 +80,7 @@ const ManagerTabs = () => {
         }}
       />
     </Tab.Navigator>
-)};
+);
 
 const Stack = createStackNavigator();
 

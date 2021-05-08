@@ -1,12 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import TicketItem from '../../components/TicketItem';
+import { reservations } from '../../data/MockShops';
 
 interface IProps {}
 
 const ManageReservations: React.FC<IProps> = () => {
+  
+
   return (
     <View style={styles.container}>
-      <Text>Hi</Text>
+      {reservations.map((e, i) => <TicketItem key={i} data={e} />)}
     </View>
   );
 }
@@ -14,8 +18,8 @@ const ManageReservations: React.FC<IProps> = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 });
 

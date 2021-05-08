@@ -15,7 +15,7 @@ export const categories = [
     image: 'https://images.squarespace-cdn.com/content/v1/59b6ef82f7e0abd6682f5b79/1560471000487-XV56EUZC4YEWGKGR6HWR/ke17ZwdGBToddI8pDm48kA_SSaoz4elkj-HsZd8gX3Z7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UWPwZyNcweDIvdeL5kotwkIXjs9g0WibSO_cU-Ijy4Pwg6poS-6WGGnXqDacZer4yQ/2019-06-06+Cake+Plus+Size+store+photos-Darin+Kamnetz-164.jpg?format=2500w',
     title: 'Clothing'
   }
-]
+];
 
 export const restaurants = [
   {
@@ -58,7 +58,7 @@ export const restaurants = [
     price: '$$$',
     hours: '08:00-23:00'
   }
-]
+];
 
 export const supermarkets = [
   {
@@ -101,7 +101,7 @@ export const supermarkets = [
     price: '$',
     hours: '08:00-21:00'
   }
-]
+];
 
 export const selfCare = [
   {
@@ -144,7 +144,7 @@ export const selfCare = [
     price: '$',
     hours: '10:00-22:00'
   }
-]
+];
 
 export const clothing = [
   {
@@ -187,4 +187,40 @@ export const clothing = [
     price: '$$',
     hours: '09:00-23:00',
   }
-]
+];
+
+export const slots = [
+  {
+    startTime: '09:00',
+    endTime: '10:00',
+  },
+  {
+    startTime: '10:00',
+    endTime: '11:00',
+  },
+  {
+    startTime: '11:00',
+    endTime: '11:30',
+  },
+];
+
+export const reservations = [
+  {
+    name: 'Frank Boyd',
+    phoneNum: '6922953378',
+    slot: '1',
+    time: '09:00-10:00',
+  },
+  {
+    name: 'Jeniffer Johnson',
+    phoneNum: '6901739163',
+    slot: '2',
+    time: '10:00-11:00',
+  },
+  {
+    name: 'Keith Adams',
+    phoneNum: '6992211766',
+    slot: '3',
+    time: '11:00-11:30',
+  },
+];

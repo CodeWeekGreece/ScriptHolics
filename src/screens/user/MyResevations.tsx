@@ -53,11 +53,8 @@ const MyResevations: React.FC<IProps> = () => {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    // flex: 1,
     alignItems: 'flex-start',
     flexDirection: 'row',
-    // flexWrap: 'nowrap',
-    // justifyContent: 'center',
     marginTop: 10,
   },
 });

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TextInput as Input, Dimensions, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons'
-import { restaurants } from '../../data/MockShops';
+import { restaurants, slots } from '../../data/MockShops';
 import { TextInput } from 'react-native-paper';
 import InputDialog from '../../components/InputDialog';
 import { Picker } from '@react-native-picker/picker';
@@ -15,20 +15,6 @@ const ManagerHome: React.FC<IProps> = () => {
   const [changingTitle, setChangingTitle] = useState(false)
   const [changingDesc, setChangingDesc] = useState(false);
   const [slotNumber, setSlotNumber] = useState(3);
-  const [data, setData] = useState([
-    {
-      startTime: '09:00',
-      endTime: '10:00',
-    },
-    {
-      startTime: '10:00',
-      endTime: '11:00',
-    },
-    {
-      startTime: '11:00',
-      endTime: '11:30',
-    },
-  ])
 
   return (
     <View style={styles.container}>
@@ -105,7 +91,7 @@ const ManagerHome: React.FC<IProps> = () => {
             <Picker.Item label="9" value={9} />
             <Picker.Item label="10" value={10} />
         </Picker>
-        {data.map((e, i) => <Slot key={i} index={i + 1} data={e} />)}
+        {slots.map((e, i) => <Slot key={i} index={i + 1} data={e} />)}
         </View>
       </ScrollView>
     </View>
