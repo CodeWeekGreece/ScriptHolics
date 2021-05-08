@@ -44,7 +44,6 @@ const MyResevations: React.FC<IProps> = () => {
 
   return (
     <View style={styles.mainContainer}>
-      {(resList === null || resList === undefined || resList === []) ? <Text>Empty</Text> : (
       <ScrollView>
           {userRes.map((e, i) => <ReservationItem value={value} data={e} key={i} />)}
       </ScrollView>)}
