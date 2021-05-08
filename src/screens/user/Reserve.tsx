@@ -20,19 +20,22 @@ const Reserve: React.FC<IProps> = () => {
 
   const saveReservation = async () => {
     setLoading(true);
+    setTimeout(() => {
+      console.log('Go')
+    }, 2000);
     try {
-      await AsyncStorage.getItem(list)
-        .then((reservations) => {
-          const res: Array<object> = JSON.parse(reservations);
-          res.push({
-            name: params.name,
-            image: params.image,
-            date: selectedDate,
-            time: selectedTime,
-            uuid: uuidv4(),
-          });
-          AsyncStorage.setItem(list, JSON.stringify(res));
-        });
+      // await AsyncStorage.getItem(list)
+      //   .then((reservations) => {
+      //     const res: Array<object> = JSON.parse(reservations);
+      //     res.push({
+      //       name: params.name,
+      //       image: params.image,
+      //       date: selectedDate,
+      //       time: selectedTime,
+      //       uuid: uuidv4(),
+      //     });
+      //     AsyncStorage.setItem(list, JSON.stringify(res));
+      //   });
       setLoading(false);
       Toast.show('Your reservation was a success!', Toast.LONG)
     } catch (e) {

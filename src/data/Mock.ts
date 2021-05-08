@@ -224,3 +224,30 @@ export const reservations = [
     time: '11:00-11:30',
   },
 ];
+
+export const userRes = [
+  {
+    name: 'Apple Fresh',
+    image: 'https://m.media-amazon.com/images/I/4198lAEMlEL.jpg',
+    slot: '1',
+    time: '09:00-10:00',
+  },
+  {
+    name: 'Queenology',
+    image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ned-hair-salon-1541713484.jpg',
+    slot: '3',
+    time: '11:00-12:00',
+  },
+  {
+    name: 'Nicequipo',
+    image: 'https://media.timeout.com/images/100515315/image.jpg',
+    slot: '5',
+    time: '18:00-19:30',
+  },
+  {
+    name: 'The Amber Rooftop',
+    image: 'https://lh3.googleusercontent.com/proxy/u69buNTzv2yYixg8fnAtpvgyOHMJr_pNoyuO4O_uBloymlyD_TEW1AKCSzsNOf-MOXbKkFLKzj6cFWH5FWxGynaxRTsj1wGBLA3Gm4T7MkG4PyfrTw-KFAu3nw',
+    slot: '10',
+    time: '21:00-23:30',
+  },
+]

@@ -5,6 +5,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native-paper';
 import ReservationItem from '../../components/ReservationItem';
 import { list } from '../../data/Dev';
+import { userRes } from '../../data/Mock';
 
 interface IProps {}
 
@@ -30,7 +31,7 @@ const MyResevations: React.FC<IProps> = () => {
       }
     }
 
-    getList()
+    // getList()
   }, [focused, refresh]);
 
   useFocusEffect(() => {
@@ -45,7 +46,7 @@ const MyResevations: React.FC<IProps> = () => {
     <View style={styles.mainContainer}>
       {(resList === null || resList === undefined || resList === []) ? <Text>Empty</Text> : (
       <ScrollView>
-          {resList.map((e, i) => <ReservationItem value={value} data={e} key={i} />)}
+          {userRes.map((e, i) => <ReservationItem value={value} data={e} key={i} />)}
       </ScrollView>)}
     </View>
   )

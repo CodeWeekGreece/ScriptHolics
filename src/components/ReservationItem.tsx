@@ -26,8 +26,8 @@ const ReservationItem: React.FC<IProps> = ({ data, value }) => {
         <Image style={styles.image} source={{ uri: data.image }} />
         <View style={{flexDirection: 'column', justifyContent: 'space-between'}}>
           <Text style={styles.title}>{data.name}</Text>
-          <View style={styles.dateTimeConatiner}>
-            <Text>{data.date}</Text>
+          <View style={styles.infoConatiner}>
+            <Text>Slot: {data.slot}</Text>
             <Text>{data.time}</Text>
           </View>
         </View>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    paddingBottom: 5,
+    paddingBottom: 15,
     marginLeft: 5,
     marginRight: 5,
   },
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingBottom: 10,
   },
-  dateTimeConatiner: {
+  infoConatiner: {
     marginLeft: 5,
   }
 });

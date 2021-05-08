@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TextInput as Input, Dimensions, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons'
-import { restaurants, slots } from '../../data/MockShops';
+import { restaurants, slots } from '../../data/Mock';
 import { TextInput } from 'react-native-paper';
 import InputDialog from '../../components/InputDialog';
 import { Picker } from '@react-native-picker/picker';

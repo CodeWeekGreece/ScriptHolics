@@ -19,6 +19,7 @@ import Reserve from '../screens/user/Reserve';
 import UserLogin from '../screens/accounts/UserLogin';
 import ManagerLogin from '../screens/accounts/ManagerLogin';
 import ManageReservations from '../screens/manager/ManageReservations';
+import Filter from '../screens/categories/Filter';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -36,14 +37,14 @@ const UserTabs = () => {
         name="Home"
         component={UserHome}
         options={{
-          tabBarIcon: ({ color }: TabBarProps) => <MaterialIcons name="home" color={color} size={22} />,
+          tabBarIcon: ({ color }: TabBarProps) => <MaterialIcons name="home" color={color} size={24} />,
         }}
       />
       <Tab.Screen
         name="Reservations"
         component={MyResevations}
         options={{
-          tabBarIcon: ({ color }: TabBarProps) => <MaterialIcons name="fastfood" color={color} size={22} />,
+          tabBarIcon: ({ color }: TabBarProps) => <MaterialIcons name="event" color={color} size={24} />,
         }}
       />
       <Tab.Screen
@@ -86,7 +87,7 @@ const Stack = createStackNavigator();
 
 const StackNav = () => {
   return (
-    <Stack.Navigator initialRouteName="Login">
+    <Stack.Navigator initialRouteName="Login" mode="modal">
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="User Login" component={UserLogin} />
       <Stack.Screen name="Manager Login" component={ManagerLogin} />
@@ -111,6 +112,7 @@ const StackNav = () => {
       <Stack.Screen name="SelfCare" component={SelfCare} />
       <Stack.Screen name="Clothing" component={Clothing} />
       <Stack.Screen name="Reserve" component={Reserve} />
+      <Stack.Screen name="Filter" component={Filter} />
     </Stack.Navigator>
   )
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import TicketItem from '../../components/TicketItem';
-import { reservations } from '../../data/MockShops';
+import { reservations } from '../../data/Mock';
 
 interface IProps {}
 

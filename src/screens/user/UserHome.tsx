@@ -7,7 +7,7 @@ import { Appbar } from 'react-native-paper';
 import CategoryItem from '../../components/CategoryItem';
 import Item from '../../components/Item';
 import { list } from '../../data/Dev';
-import { categories } from '../../data/MockShops';
+import { categories } from '../../data/Mock';
 
 interface IProps {}
 
