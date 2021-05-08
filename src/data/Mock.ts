@@ -193,14 +193,17 @@ export const slots = [
   {
     startTime: '09:00',
     endTime: '10:00',
+    available: true,
   },
   {
     startTime: '10:00',
     endTime: '11:00',
+    available: false,
   },
   {
     startTime: '11:00',
     endTime: '11:30',
+    available: true,
   },
 ];
 

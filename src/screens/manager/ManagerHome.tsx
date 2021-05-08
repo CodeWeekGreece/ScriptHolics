@@ -3,7 +3,6 @@ import { TextInput as Input, Dimensions, Image, Pressable, ScrollView, StyleShee
 import { MaterialIcons } from '@expo/vector-icons'
 import { restaurants, slots } from '../../data/Mock';
 import { TextInput } from 'react-native-paper';
-import InputDialog from '../../components/InputDialog';
 import { Picker } from '@react-native-picker/picker';
 import Slot from '../../components/Slot';
 

@@ -8,14 +8,15 @@ import { AirbnbRating } from 'react-native-ratings';
 import { list } from '../../data/Dev';
 import Toast from 'react-native-simple-toast';
 import { v4 as uuidv4 } from 'uuid';
+import { slots } from '../../data/Mock';
+import Slot from '../../components/Slot';
 
 interface IProps {}
 
 const Reserve: React.FC<IProps> = () => {
   const route = useRoute();
   const params = route.params;
-  const [selectedTime, setSelectedTime] = useState();
-  const [selectedDate, setSelectedDate] = useState();
+  const [slotNumber, setSlotNumber] = useState(1);
   const [loading, setLoading] = useState(false);
 
   const saveReservation = async () => {
@@ -60,22 +61,19 @@ const Reserve: React.FC<IProps> = () => {
         <Text style={{fontWeight: 'bold'}}> {params.hours}</Text>
       </Text>
       <View style={styles.reservationContainer}>
+      <View style={styles.slotContainer}>
+        <Text style={{ fontWeight: 'bold', fontSize: 17 }}>Slots</Text>
+        <Text style={{ marginTop: 10, fontSize: 15 }}>Choose a slot to reserve: </Text>
         <Picker
-          style={{width: 170}}
-          selectedValue={selectedDate}
-          onValueChange={(itemValue, itemIndex) => setSelectedDate(itemValue)}>
-            <Picker.Item label="10 May" value="10 May" />
-            <Picker.Item label="11 May" value="11 May" />
-            <Picker.Item label="12 May" value="12 May" />
-            <Picker.Item label="13 May" value="13 May" />
+        style={{ width: 90, marginBottom: 10 }}
+        selectedValue={slotNumber}
+        onValueChange={(itemValue, itemIndex) => setSlotNumber(itemValue)}>
+          <Picker.Item label="1" value={1} />
+          {/* <Picker.Item label="2" value={2} /> */}
+          <Picker.Item label="3" value={3} />
         </Picker>
-        <Picker
-          style={{width: 170}}
-          selectedValue={selectedTime}
-          onValueChange={(itemValue, itemIndex) => setSelectedTime(itemValue)}>
-            <Picker.Item label="10:30-11:00" value="10:30-11:00" />
-            <Picker.Item label="14:15-14:45" value="14:15-14:45" />
-        </Picker>
+        {slots.map((e, i) => <Slot key={i} index={i + 1} data={e} />)}
+        </View>
       </View>
       <Button
         loading={loading}
@@ -91,7 +89,6 @@ const Reserve: React.FC<IProps> = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // alignItems: 'center',
   },
   imageContainer: {
     // flex: 1, 
@@ -130,7 +127,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginLeft: 50,
     marginRight: 50,
-  }
+  },
+  slotContainer: {
+    marginTop: 20,
+    marginLeft: 10,
+    marginRight: 15,
+  },
 });
 
 export default Reserve;
