@@ -1,0 +1,32 @@
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  margin-top: 10px;
+}
+
+.password {
+  margin-top: 10px;
+}
+
+.form {
+  display: grid;
+}
+
+.text-input {
+  margin-bottom: 20px;
+}
+
+.label {
+  justify-self: flex-start;
+}
+
+.error-message {
+  margin-top: 10px;
+  color: #b30101;
+}

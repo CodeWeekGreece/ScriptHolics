@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+}
+
+.content {
+  flex-grow: 1;
+  height: 100vh;
+  overflow: auto;
+}
+
+.slot-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}

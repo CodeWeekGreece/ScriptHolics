@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="100dp"
+        android:entries="@array/sortings"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@id/apply_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sort_by"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315" />
+
+    <Button
+        android:id="@+id/apply_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/apply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancel_btn"
+        app:layout_constraintTop_toTopOf="@id/cancel_btn" />
+
+    <TextView
+        android:id="@+id/choose_time"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/choose"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/available_at"
+        app:layout_constraintEnd_toEndOf="@id/spinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/spinner"
+        app:layout_constraintTop_toTopOf="@id/available_at"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toStartOf="@id/apply_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/available_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/available_at"
+        app:layout_constraintStart_toStartOf="@id/sort_by"
+        app:layout_constraintTop_toBottomOf="@id/sort_by" />
+
+    <TextView
+        android:id="@+id/sort_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/sort_by"
+        app:layout_constraintBottom_toTopOf="@id/cancel_btn"
+        app:layout_constraintEnd_toStartOf="@id/spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.319" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

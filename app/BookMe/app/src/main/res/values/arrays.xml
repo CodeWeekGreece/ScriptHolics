@@ -1,0 +1,22 @@
+<resources>
+    <string-array name="sortings">
+        <item>Rating ↓</item>
+        <item>Rating ↑</item>
+        <item>Price ↓</item>
+        <item>Price ↑</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>@string/english</item>
+        <item>@string/greek</item>
+        <item>@string/french</item>
+        <item>@string/dutch</item>
+    </string-array>
+
+    <string-array name="language_codes">
+        <item>en</item>
+        <item>el</item>
+        <item>fr</item>
+        <item>nl</item>
+    </string-array>
+</resources>

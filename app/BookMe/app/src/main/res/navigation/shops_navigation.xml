@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shops_navigation"
+    app:startDestination="@id/fragment_shops">
+
+    <fragment
+        android:id="@+id/fragment_shops"
+        android:name="com.midyh.bookme.ui.shops.ShopsFragment"
+        tools:layout="@layout/fragment_shops">
+        <argument
+            android:name="category"
+            android:defaultValue="restaurants"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_shops_to_overview"
+            app:destination="@id/fragment_overview"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_overview"
+        android:name="com.midyh.bookme.ui.overview.OverviewFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        tools:layout="@layout/fragment_overview">
+        <argument
+            android:name="shop"
+            app:argType="com.midyh.bookme.data.Shop" />
+        <argument
+            android:name="category"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

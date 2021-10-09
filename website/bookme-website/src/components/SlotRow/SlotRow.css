@@ -1,0 +1,3 @@
+.time::-webkit-clear-button:hover {
+  display: none;
+}

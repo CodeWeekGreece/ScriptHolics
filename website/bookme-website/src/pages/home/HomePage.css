@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+}
+
+.content {
+  flex-grow: 1; 
+  height: 100vh;
+  overflow: auto;
+}
+
+.loading {
+  display: flex;
+  flex-grow: 1; 
+  height: 100vh;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+}

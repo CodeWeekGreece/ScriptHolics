@@ -1,0 +1,25 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/general_header">
+
+        <ListPreference
+            app:entries="@array/languages"
+            app:entryValues="@array/language_codes"
+            app:key="language"
+            android:defaultValue="en"
+            app:title="@string/language"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/account_header">
+
+        <Preference
+            app:key="logout"
+            android:title="Logout"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
